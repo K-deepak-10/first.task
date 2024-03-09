@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB PAGE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1500px;
+            margin: 0 ;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .text-secondary {
+            color: #666;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h5 class="mb-3">Add Partner Profile</h5>
+        <p class="text-secondary">Partners are organizations with whom you want to share your project information.</p>
+        <form id="partnerForm" class="form-group mb-2">
+            <div class="mb-3">
+                <label class="form-label required" for="fname">Partner Name</label><span class="text-danger">*</span>
+                <input type="text" class="form-control" id="fname" name="fname" placeholder="Partner company name">
+            </div>
+            <div class="mb-3">
+                <label class="form-label required" for="sname">Description</label><span class="text-danger">*</span>
+                <textarea class="form-control" id="sname" name="sname" placeholder="Enter description (max 250 characters)" maxlength="250"></textarea>
+                <p class="text-secondary">provide max 250 characters</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label required" for="mname">Partner Primary Contact</label><span class="text-danger">*</span>
+                <input type="text" class="form-control" id="mname" name="mname" placeholder="Primary contact">
+            </div>
+            <div class="mb-3">
+                <label class="form-label required" for="hname">Email Address</label><span class="text-danger">*</span>
+                <input type="email" class="form-control" id="hname" name="hname" placeholder="name@example.com">
+                <p class="text-secondary">We'll never share your email with anyone else</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label required" for="jname">Phone Number</label><span class="text-danger">*</span>
+                <input type="tel" class="form-control" id="jname" name="jname" placeholder="91-80-9878888888" pattern="[0-9]{2}-[0-9]{2}-[0-9]{10}">
+            </div>
+            <div class="mb-3">
+                <button type="button" class="btn btn-primary me-2" onclick="applyAction()">Apply</button>
+                <button type="button" class="btn btn-primary me-2" onclick="saveAction()">Save</button>
+                <button type="button" class="btn btn-primary me-2" onclick="cancelAction()">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="resetForm()">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function applyAction() {
+            alert(" The form is Applied ");
+        }
+        
+        function saveAction() {
+            alert("The form is saved !");
+        }
+        
+        function cancelAction() {
+            alert("your form is saved!");
+        }
+        
+        function resetForm() {
+            document.getElementById("partnerForm").reset();
+            alert("The form is reset!");
+        }
+    </script>
+</body>
+</html>
